@@ -19,6 +19,7 @@ jobs:
       - run: cat non-existing-file.fail
   Simulate-Cleanup:
     if: always()
+    needs: [Explore-GitHub-Actions]
     runs-on: ubuntu-latest
     steps:
       - run: |
