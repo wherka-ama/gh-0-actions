@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [workflow_dispatch]
 jobs:
   setup-python-on-26:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
     container: ubuntu:26.04
     steps:
       - uses: actions/setup-python@v6
