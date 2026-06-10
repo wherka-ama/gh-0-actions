@@ -14,7 +14,7 @@ jobs:
           which -a python
           cat /etc/lsb-release
           cat /etc/os-release
-          find /__t/Python -type d -ls
+          find /__t/Python -type d -maxdepth 1 -ls
           mount
   setup-python-on-24:
     runs-on: ubuntu-latest
@@ -28,5 +28,5 @@ jobs:
           which -a python
           cat /etc/lsb-release
           cat /etc/os-release
-          find /__t/Python -type d -ls
+          find /__t/Python -type d -maxdepth 1  -ls
           mount
