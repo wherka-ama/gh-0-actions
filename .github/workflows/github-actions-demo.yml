@@ -2,6 +2,13 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [workflow_dispatch]
 jobs:
+  setup-python-on-26:
+    runs-on: [self-hosted]
+    container: ubuntu:26.04
+    steps:
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
   job1:
     runs-on: ubuntu-latest
     # Expose step outputs as job outputs
