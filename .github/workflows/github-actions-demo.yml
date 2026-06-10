@@ -8,21 +8,25 @@ jobs:
     steps:
       - uses: actions/setup-python@v6
         with:
-          python-version: '3.14'
+          python-version: '3.10'
       - id: step1
         run: |
           which -a python
           cat /etc/lsb-release
           cat /etc/os-release
+          find /__t/Python -type d -ls
+          mount
   setup-python-on-24:
     runs-on: ubuntu-latest
     container: ubuntu:24.04
     steps:
       - uses: actions/setup-python@v6
         with:
-          python-version: '3.14'
+          python-version: '3.10'
       - id: step1
         run: |
           which -a python
           cat /etc/lsb-release
           cat /etc/os-release
+          find /__t/Python -type d -ls
+          mount
