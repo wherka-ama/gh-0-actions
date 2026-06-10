@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/setup-python@v6
         with:
-          python-version: '3.16'
+          python-version: '3.14'
       - id: step1
         run: |
           which -a python
@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/setup-python@v6
         with:
-          python-version: '3.16'
+          python-version: '3.14'
       - id: step1
         run: |
           which -a python
